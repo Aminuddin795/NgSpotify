@@ -1,0 +1,64 @@
+
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+
+
+<h1>Need Music</h1>
+
+<p class="need">Use MySpotify App to find new music</p>
+<form>
+  <div class="form-group">
+    <input
+      class="w3-input"
+      type="text"
+      [(ngModel)]="searchStr"
+      placeholder="Search Artist"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <button
+    class="w3-btn w3-green w3-border w3-border-grey w3-round-large"
+    type="submit"
+    (click)="searchMusic()"
+    name="Go!"
+    value="submit"
+  >
+    Searching
+  </button>
+
+  <p></p>
+  <p></p>
+</form>
+
+
+
+<ng-container *ngIf="YourArtists !== null">
+  <div class="w3-panel w3-topbar w3-bottombar w3-border-grey w3-pale-green" *ngFor="let artist of listOfMusic">
+      <p *ngIf="artist.images.length > 0">
+
+          <img class="artist-thumbnail img-circle" src="{{ artist.images[0].url}}">
+  
+        </p>
+
+    <p class="name">Details of {{ artist.name }}</p>
+    <p class="namedetail"><b>GENRES: </b>{{ artist.genres }}</p>
+    <p class="namedetail"><b>TYPE: </b>{{ artist.type }}</p>
+    <p class="namedetail"><b>POPULARITY: </b>{{ artist.popularity }}</p>
+    <p class="namedetail"><b>FOLLOWERS: </b>{{ artist.followers.total }}</p>
+    
+    
+    
+
+      
+
+      
+
+    </div>
+
+  
+  
+ 
+</ng-container>
+

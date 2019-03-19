@@ -1,0 +1,20 @@
+.name {
+  text-align: left;
+  color: rgb(12, 121, 70);
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  
+}
+
+.namedetail {
+  text-align: left;
+  color: rgb(13, 32, 31);
+
+}
+
+.artist-thumbnail{
+ width: 250px;
+ width: 250px;
+
+}
